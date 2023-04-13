@@ -6,7 +6,7 @@
 /*   By: mmaria-d <mmaria-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 19:03:55 by manuel            #+#    #+#             */
-/*   Updated: 2023/04/13 20:48:48 by mmaria-d         ###   ########.fr       */
+/*   Updated: 2023/04/13 20:53:38 by mmaria-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ int	printformat(va_list ptr, char flag)
 		return (putcounthex(va_arg(ptr, unsigned int), HEXB));
 	if (flag == '%')
 		return (putcountchar('%'));
+	return (0);
 }
 
 int	ft_printf(const char *str, ...)

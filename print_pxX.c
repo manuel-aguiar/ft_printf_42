@@ -6,7 +6,7 @@
 /*   By: mmaria-d <mmaria-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 19:03:55 by manuel            #+#    #+#             */
-/*   Updated: 2023/04/13 20:45:53 by mmaria-d         ###   ########.fr       */
+/*   Updated: 2023/04/13 20:54:06 by mmaria-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ static char	*stringaddr(unsigned long nb, char *str, int *len)
 {
 	if (nb == 0)
 	{
-		*str == HEXS[0];
+		*str = HEXS[0];
 		*len = 1;
 		return (str);
 	}
@@ -48,7 +48,7 @@ static char	*stringhex(unsigned int nb, char *str, int *len, char *base)
 {
 	if (nb == 0)
 	{
-		*str == base[0];
+		*str = base[0];
 		*len = 1;
 		return (str);
 	}
