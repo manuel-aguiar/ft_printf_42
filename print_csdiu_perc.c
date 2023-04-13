@@ -6,7 +6,7 @@
 /*   By: mmaria-d <mmaria-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 19:03:55 by manuel            #+#    #+#             */
-/*   Updated: 2023/04/13 20:48:02 by mmaria-d         ###   ########.fr       */
+/*   Updated: 2023/04/13 21:13:37 by mmaria-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,8 @@ int	putcountunint(unsigned int nb)
 
 int	putcountstr(char *str)
 {
+	if (!str)
+		return (putcountstr("(null)"));
 	return (write(1, str, ft_strlen(str)));
 }
 

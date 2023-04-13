@@ -6,7 +6,7 @@
 /*   By: mmaria-d <mmaria-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 19:03:55 by manuel            #+#    #+#             */
-/*   Updated: 2023/04/13 20:54:06 by mmaria-d         ###   ########.fr       */
+/*   Updated: 2023/04/13 21:20:43 by mmaria-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,14 @@ int	putcountaddr(void *address)
 {
 	unsigned long	addr;
 	int				wordlen;
-	char			str[16];
+	char			str[18];
 	char			*ptr;
 
 	addr = (unsigned long)address;
+	if (!addr)
+	{
+		return (putcountstr("(nil)"));
+	}
 	wordlen = 0;
 	ptr = stringaddr(addr, (str + sizeof(str) - 1), &wordlen);
 	*--ptr = 'x';

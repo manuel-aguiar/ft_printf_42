@@ -2,7 +2,7 @@ FILES = 	ft_printf print_csdiu_perc print_pxX
 	 
 HEADERS = ft_printf.h
 
-NAME = ft_printf.a
+NAME = libftprintf.a
 
 
 SRCS = $(addsuffix .c, $(FILES))
