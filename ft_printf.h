@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_printf.h                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: manuel <manuel@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mmaria-d <mmaria-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 19:03:55 by manuel            #+#    #+#             */
-/*   Updated: 2023/03/22 19:03:55 by manuel           ###   ########.fr       */
+/*   Updated: 2023/04/13 20:49:35 by mmaria-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,15 +20,13 @@
 # define FLAGS "cspdiuxX%"
 # include <stdarg.h>
 
-#include <unistd.h>    /* DELETE */
-#include <limits.h>    /* DELETE */
+# include <unistd.h>    /* DELETE */
+# include <limits.h>    /* DELETE */
 /* include libft */
-
 
 /* ---- ft_printf.c ---- */
 int	ft_printf(const char *str, ...);
 int	printformat(va_list ptr, char flag);
-
 
 /* ---- print_pxX.c ---- */
 int	putcountaddr(void *address);

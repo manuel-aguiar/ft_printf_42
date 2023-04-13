@@ -1,35 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_printf.h                                        :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: manuel <manuel@student.42.fr>              +#+  +:+       +#+        */
+/*   By: mmaria-d <mmaria-d@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/03/22 19:03:55 by manuel            #+#    #+#             */
-/*   Updated: 2023/03/22 19:03:55 by manuel           ###   ########.fr       */
+/*   Updated: 2023/04/13 20:48:48 by mmaria-d         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
 
-int    flagcheck(char c, char *flags, va_list ptr)
+int	flagcheck(char c, char *flags, va_list ptr)
 {
-    if (!flags)
-        return (0);
-    while (*flags)
-    {
-        if (c == *flags)
-            return (1);
-        flags++;
-    }
-    va_arg(ptr, int);
-    return (0);
+	if (!flags)
+		return (0);
+	while (*flags)
+	{
+		if (c == *flags)
+			return (1);
+		flags++;
+	}
+	va_arg(ptr, int);
+	return (0);
 }
 
 int	printformat(va_list ptr, char flag)
 {
-    if (!flagcheck(flag, FLAGS, ptr))
-        return (0);
+	if (!flagcheck(flag, FLAGS, ptr))
+		return (0);
 	if (flag == 'c')
 		return (putcountchar(va_arg(ptr, int)));
 	if (flag == 's')
