@@ -22,9 +22,6 @@ $(NAME): $(OBJS)
 $(OBJS): $(SRCS) $(HEADERS)
 	$(CC) $(FLAGS) -I$(HEADERS) $(SRCS)
 
-$(B_OBJS): $(B_SRCS) $(HEADERS)
-	$(CC) $(FLAGS) -I$(HEADERS) $(B_SRCS) 
-
 clean:
 	$(RM) $(OBJS) $(B_OBJS)
 
